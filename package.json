@@ -1,0 +1,37 @@
+{
+  "name": "@riders-agency/pulse-sdk",
+  "version": "0.1.0",
+  "description": "Server-side TypeScript client for Pulse API v1",
+  "type": "module",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./frameworks": {
+      "types": "./dist/frameworks.d.ts",
+      "import": "./dist/frameworks.js"
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "pnpm build && node --test test/*.test.mjs",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "6.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/riders-agency/pulse-sdk-typescript.git"
+  },
+  "homepage": "https://github.com/riders-agency/pulse-sdk-typescript"
+}
